@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ELIUDIUM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  
+  <style>
+$(document).ready(function() {
+ 
+  // Fetch product data
+  $.getJSON('get-products.php', function(products) {
+    // Loop through each product and create HTML elements
+    products.forEach(function(product) {
+      var html = '<div class="product">';
+      html += '<h2>' + product.name + '</h2>';
+      html += '<p>' + product.description + '</p>';
+      html += '<img src="' + product.imageUrl + '" alt="' + product.name + '">';
+      html += '<p>$' + product.price + '</p>';
+      html += '</div>';
+
+      // Add HTML elements to the page
+      $('.product-list').append(html);
+    });
+  });
+});
+ 
+    
+    </style>
+  </head>
+<header>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+    </div>
+     
+    <style>
+    .nav {
+  background-color:#008080 ;
+  text-decoration-style: solid;
+  overflow: red;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  .nav {
+  background-color:#008080 ;
+  text-decoration-style: solid;
+  overflow: red;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration-style: solid;
+}
+
+.nav li a:hover {
+  background-color: #008080;
+}
+
+.cart-count {
+  background-color: #008080;
+  color: #333;
+  border-radius: 50%;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+.nav li:nth-child(2) {
+  position: absolute;
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+.nav li:nth-child(3) {
+  position: absolute;
+  right: 25%;
+}
+
+.nav li:last-child {
+  position: absolute;
+  right: 0;
+}
+
+.nav li:last-child a {
+  background: url(cart-image.jpg) no-repeat center;
+  padding: 14px 50px 14px 20px;
+  background-size: 30px;
+}
+
+
+	a:hover {
+		text-decoration: underline;
+	}
+    
+     
+      
+      a:hover {
+        color: green;
+        border-bottom: 1px solid #005aa0;
+      }
+
+head {
+  background-color:invert;
+              url(background-image.jpg) center/cover fixed no-repeat;
+  backdrop-filter: blur(10px);
+}
+
+/* Add this to all the elements to remove the inherited shadow */
+* {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Optional: Add a border radius for a softer look */
+body {
+  border-radius: 20px;
+}
+.products-container {
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(25% - 20px);
+}
+
+.product:hover {
+  border-color: #999;
+}
+
+.product-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-details h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0 0;
+
+
+
+</style>
+<div class="products-container">
+  <h2>Featured Products</h2>
+  <ul class="products-list">
+    <li class="product">
+      <div class="product-image">
+        <img src="product1.jpg" alt="Product 1">
+      </div>
+      <div class="product-details">
+        <h3>Product 1</h3>
+        <p class="price">$10.99</p>
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+        
+
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+      </div>
+    </li>
+    <li class="product">
+      <div class="product-image">
+        <img src="product2.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <h3>Product 2</h3>
+        <p class="price">$19.99</p>
+      </div>
+    </li>
+    <!<
+-- Add 98 more products here -->
+  </ul>
+  <head>
+	<title>PHP Example</title>
+    </footer>
+  </body>
+</html>
