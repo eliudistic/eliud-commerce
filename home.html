@@ -1,791 +1,336 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ELIUDIUM</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-  
+<head>
+  <title>ELIUDIUM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
     /* Add this to center the slideshow */
-  .slideshow-container {
-    
-    margin: margin-left;
-  }
-
-  /* Add this to style the images in the slideshow */
-  .mySlides {
-    display: image;
-  }
-  .mySlides img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Add this to style the dots at the bottom of the slideshow */
-  .dot-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 5px;
-    background-color: #bbb;
-    cursor: pointer;
-  }
-  .active,
-  .dot:hover {
-    background-color: #008080;
-  }
-$(document).ready(function() {
- 
-  
-    
-    </style>
-  </head>
-<header>
-    <div class="nav">
-        <ul>
-            <li><a href=Home.html>Home</a></li>
-            <li><a href=categories.html>Categories</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Cart <span class="cart-count">0</span></a></li>
-        </ul>
-    </div>
-    
-        </ul>
-        <form class="search-form">
-          <input type="text" placeholder="Search for products...">
-          <button type="submit">Search</button>
-        </form>
-      </nav>
-    </header>
-    <main>
-      <h1>3LIUD</h1>
-      <div class="categories">
-        <h2>Product Categories</h2>
-        <ul>
-          <li><a href=electronics.html>Electronics</a></li>
-          <li><a href=clothing.html>Clothing</a></li>
-          <li><a href=books.html>Books</a></li>
-          <!-- Add more categories here -->
-        </ul>
-      </div>
-        <body>
-          <script>
-  $(document).ready(function() {
-    var slides = $('.slide');
-    var currentSlide = 0;
-    var slideInterval = setInterval(nextSlide, 5000);
-
-    function nextSlide() {
-      slides.eq(currentSlide).fadeOut(1000);
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides.eq(currentSlide).fadeIn(1000);
+    .slideshow-container {
+      margin: auto;
     }
-
-    // Make the slideshow responsive
-    $(window).on('resize', function() {
-      var slideHeight = $('.slide').height();
-      $('.slideshow-container').css('height', slideHeight + 'px');
-    }).resize();
-  });
-</script>
-  <div class="slideshow-container">
-    <div class="slide1">
-      <a href="clothing.html"><img src="download.jpeg"></a>
-    </div>
-    <div class="slide2">
-      <a href="books.html"><img src="download (1).jpeg"></a>
-    </div>
-    <div class="slide3">
-      <a href="electronics.html"><img src="images.jpeg"></a>
-    </div>
-  </div>
-  <!-- The rest of your HTML code -->
-
-
-      <div class="slideshow-container">
-  <div class="mySlides">
-    <a href="clothing.html"><img src="download.jpeg"></a>
-  </div>
-
-  <div class="mySlides">
-    <a href="books.html"><img src="download (1).jpeg"></a>
-  </div>
-
-  <div class="mySlides">
-    <a href="electronics.html"><img src="images.jpeg"></a>
-  </div>
-
-  <!-- Add more slides here -->
-
-  <!-- Add arrows to navigate the slideshow -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-<!-- Add dots at the bottom of the slideshow to indicate the current slide -->
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <!-- Add more dots here -->
-</div>
-
-      <style>      
-  </div>
-     
-    <style>
-      /* Add this to center the slideshow */
-  .slideshow-container {
-    margin: auto;
-  }
-
-  /* Add this to style the images in the slideshow */
-  .mySlides {
-    display: none;
-  }
-  .mySlides img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Add this to style the dots at the bottom of the slideshow */
-  .dot-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 5px;
-    background-color: grey;
-    cursor: pointer;
-  }
-  .active,
-  .dot:hover {
-    background-color: #008080;
-  }
-.slide {
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
+    /* Add this to style the images in the slideshow */
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Add this to style the dots at the bottom of the slideshow */
+    .dot-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: grey;
+      cursor: pointer;
+    }
+    .active,
+    .dot:hover {
+      background-color: #008080;
+    }
+    /* Add this to style the navigation */
     .nav {
-  background-color:#008080 ;
-  text-decoration-style: solid;
-  overflow: red;
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-  .nav {
-  background-color:#008080 ;
-  text-decoration-style: solid;
-  overflow: red;
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav li {
-  float: left;
-}
-
-.nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration-style: solid;
-}
-
-.nav li a:hover {
-  background-color: #008080;
-}
-
-.cart-count {
-  background-color: #008080;
-  color: #333;
-  border-radius: 50%;
-  padding: 0 5px;
-  margin-left: 5px;
-}
-
-.nav li:last-child {
-  margin-right: 0;
-}
-
-.nav li:nth-child(2) {
-  position: absolute;
-  left: 25%;
-  transform: translateX(-50%);
-}
-
-.nav li:nth-child(3) {
-  position: absolute;
-  right: 25%;
-}
-
-.nav li:last-child {
-  position: absolute;
-  right: 0;
-}
-
-.nav li:last-child a {
-  background: url(cart-image.jpg) no-repeat center;
-  padding: 14px 50px 14px 20px;
-  background-size: 30px;
-}
-
-
-	a:hover {
-		text-decoration: underline;
-	}
-    
-     
-      
-      a:hover {
-        color: green;
-        border-bottom: 1px solid #005aa0;
-      }
-
-head {
-  background-color:black;
-              url(background-image.jpg) center/cover fixed no-repeat;
-  backdrop-filter: blur(10px);
-}
-
-/* Add this to all the elements to remove the inherited shadow */
-* {
-  -webkit-box-shadow: green;
-  -moz-box-shadow: blue;
-  box-shadow: red;
-}
-
-/* Optional: Add a border radius for a softer look */
-body {
-  border-radius: 50px;
-}
-.products-container {
-  margin: 20px auto;
-  max-width: 1000px;
-}
-
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.product {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: calc(25% - 20px);
-}
-
-.product:hover {
-  border-color: #999;
-}
-
-.product-image {
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.product-image img {
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.product-details {
-  padding: 10px;
-  text-align: center;
-}
-
-.product-details h3 {
-  font-size: 1.2em;
-  margin: 0;
-}
-
-.price {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 10px 0 0;
-
-
-
-
-</style>
-<div class="products-container">
-  <h2>Featured Products</h2>
-  <ul class="products-list">
-    <li class="product">
-      <div class="product-image">
-        <img src="product1.jpg" alt="Product 1">
-      </div>
-      <div class="product-details">
-        <h3>Product 1</h3>
-        <p class="price">$10.99</p>
-      </div>
-    </li>
-    <li class="product">
-      <div class="product-image">
-        <img src="product2.jpg" alt="Product 2">
-      </div>
-      <div class="product-details">
-        <h3>Product 2</h3>
-        <p class="price">$19.99</p>
-        
-
-      </div>
-    </li>
-    <li class="product">
-      <div class="product-image">
-        <img src="product2.jpg" alt="Product 2">
-      </div>
-      <div class="product-details">
-        <h3>Product 2</h3>
-        <p class="price">$19.99</p>
-      </div>
-    </li>
-    <li class="product">
-      <div class="product-image">
-        <img src="product2.jpg" alt="Product 2">
-      </div>
-      <div class="product-details">
-        <h3>Product 2</h3>
-        <p class="price">$19.99</p>
-      </div>
-    </li>
-    <li class="product">
-      <div class="product-image">
-        <img src="product2.jpg" alt="Product 2">
-      </div>
-      <div class="product-details">
-        <h3>Product 2</h3>
-        <p class="price">$19.99</p>
-      </div>
-    </li>
-    <li class="product">
-      <div class="product-image">
-        <img src="product2.jpg" alt="Product 2">
-      </div>
-      <div class="product-details">
-        <h3>Product 2</h3>
-        <p class="price">$19.99</p>
-      </div>
-    </li>
-   
-    <!<
-<!-- Add 98 more products here -->
-  </ul>
-    </style> 
-      <div class="products-container" id="products-container">
-        <!-- Product list will be generated here -->
-      </div>
-    </main>
-    <script>
-      // Get all category links
-      const categoryLinks = document.querySelectorAll('.category-link');
-
-      // Add click event listener to each category link
-      categoryLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          // Get the category from the data attribute
-          const category = link.dataset.category;
-
-          // Fetch the products from the server using the category
-          fetch(`/api/products?category=${category}`)
-            .then(response => response.json())
-            .then(products => {
-              // Generate the product list HTML
-              const productList = products.map(product => `
-                <li class="product">
-                  <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
-                  </div>
-                  <div class="product-details">
-                    <h3>${product.name}</h3>
-                    <p class="price">${product.price}</p>
-                  </div>
-                </li>
-              `).join('');
-
-              
-              const productsContainer = document.getElementById('products-container');
-              productsContainer.innerHTML = `
-                <h2>${category}</h2>
-                <ul class="products-list">${productList}</ul>
-              `;
-            })
-            .catch(error => {
-              console.error(error);
-            });
-        });
-      });
-    </script>
-  </body>
-  </body>
-</div>
-<div class="customer-support">
-  <h2>Customer Support</h2>
-  <div class="faq">
-    <h3>Frequently Asked Questions</h3>
-    <ul>
-      <li><a href="#">How do I place an order?</a></li>
-      <li><a href="#">What payment methods do you accept?</a></li>
-      <li><a href="#">What is your return policy?</a></li>
-      <!-- Add more FAQ items here -->
-    </ul>
-    <div class="faq-answer">
-      <h4>How can I contact customer support?</h4>
-      <p>You can contact us via live chat or by filling out the contact form below.</p>
-      <p><a href=livechat.html>Live chat</a></p>
-    </div>
-  </div>
-  <div class="contact-form">
-    <h3>Contact Us</h3>
-    <form>
-      <!-- Contact form fields -->
-    </form>
-  </div>
-  <div class="live-chat">
-    <h3>Live Chat</h3>
-    <p>Click the button below to start a live chat session with a customer support representative.</p>
-    <p><a href="#">Start live chat</a></p>
-  </div>
-</div>
-
-<style>
-    h1 {
-			color: #008080;
-			text-align: center;
-			margin-top: 50px;
-			margin-bottom: 30px;
-	}
-    h2 {
-		color: #008080;
-		margin-top: 50px;
-		margin-bottom: 20px;
-	}
-
-	p {
-		color: #555;
-		line-height: 1.6;
-		margin-bottom: 20px;
-		font-size: 16px;
-	}
-
-	ul {
-		margin-left: 30px;
-		margin-bottom: 20px;
-	}
-
-	li {
-		margin-bottom: 10px;
-	}
-
-	a {
-		color: #008080;
-		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: underline;
-	}
-      
-      body {
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-        margin: 0;
-        padding: 0;
-      }
-      
-      h2 {
-        background-color: #eee;
-        padding: 10px;
-        margin-top: 0;
-        cursor: pointer;
-      }
-      
-      .content {
-        padding: 10px;
-      }
-      
-      ul {
-        list-style-type: disc;
-        margin-left: 20px;
-      }
-      
-      a {
-        color: #0077c0;
-        text-decoration: none;
-        border-bottom: 1px solid #0077c0;
-      }
-      
-      a:hover {
-        color: #005aa0;
-        border-bottom: 1px solid #005aa0;
-      }
-
-body {
-  background:black,
-              url(background-image.jpg) center/cover fixed no-repeat;
-  backdrop-filter: blur(10px);
-}
-
-/* Add this to all the elements to remove the inherited shadow */
-* {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/* Optional: Add a border radius for a softer look */
-body {
-  border-radius: 20px;
-}
-.products-container {
-  margin: 20px auto;
-  max-width: 1000px;
-}
-
-.products-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.product {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: calc(25% - 20px);
-}
-
-.product:hover {
-  border-color: #999;
-}
-
-.product-image {
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.product-image img {
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.product-details {
-  padding: 10px;
-  text-align: center;
-}
-
-.prod
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 10px 0 0;
-}
-.customer-support {
-  padding: 50px 0;
-  background-color: #f7f7f7;
-}
-
-.customer-support h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.faq, .contact-form, .live-chat {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-  border-radius: 5px;
-  margin-bottom: 30px;
-}
-
-.faq h3, .contact-form h3, .live-chat h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-.faq ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 30px;
-}
-
-.faq li a {
-  font-size: 1.2rem;
-  color: #666;
-  text-decoration: none;
-  transition: all .2s ease-in-out;
-}
-
-.faq li a:hover {
-  color: #111;
-}
-
-.faq-answer {
-  margin-bottom: 30px;
-}
-
-.faq-answer h4 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.faq-answer p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.4;
-}
-
-.contact-form label {
-  font-size: 1.2rem;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-}
-
-.contact-form textarea {
-  height: 200px;
-}
-
-.contact-form button[type="submit"] {
-  background-color: #FF9900;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: all .2s ease-in-out;
-  cursor: pointer;
-}
-
-.contact-form button[type="submit"]:hover {
-  background-color: #FFAD33;
-}
-
-.live-chat p {
-  font-size: 1.2rem;
-  color: #111;
-}
-
-
-  .faq, .contact-form, .live-chat {
-    padding: 10px;
-  }
-  
-  .faq li a {
-    font-size: 1rem;
-  }
-  
-  .faq-answer h4 {
-    font-size: 1rem;
-  }
-  
-  .faq-answer p {
-    font-size: 1rem;
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    font-size: 1rem;
-  }
-  
-  .contact-form button[type="submit"] {
-    font-size: 1.1rem;
-  }
-}
-/* Media query for smaller screens */
-@media (max-width: 767px) 
-{
-</style>
-
-
-
+      background-color: #008080;
+      overflow: hidden;
+    }
+    .nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav li {
+      float: left;
+    }
+    .nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+    }
+    .nav li a:hover {
+      background-color: #008080;
+    }
+    .cart-count {
+      background-color: #008080;
+      color: #333;
+      border-radius: 50%;
+      padding: 0 5px;
+      margin-left: 5px;
+    }
+    .nav li:last-child {
+      position: absolute;
+      right: 0;
+    }
+    /* Add this to style the products */
+    .products-container {
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+    .products-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      width: calc(25% - 20px);
+    }
+    .product:hover {
+      border-color: #999;
+    }
+    .product-image {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-image img {
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .product-details {
+      padding: 10px;
+      text-align: center;
+    }
+    .product-details h3 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    .price {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+    /* Add this to style the customer support section */
+    .customer-support {
+      padding: 50px 0;
+      background-color: #f7f7f7;
+    }
+    .customer-support h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .faq, .contact-form, .live-chat {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,.1);
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .faq h3, .contact-form h3, .live-chat h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #111;
+    }
+    .faq ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+    .faq li a {
+      font-size: 1.2rem;
+      color: #666;
+      text-decoration: none;
+      transition: all .2s ease-in-out;
+    }
+    .faq li a:hover {
+      color: #111;
+    }
+    .faq-answer {
+      margin-bottom: 30px;
+    }
+    .faq-answer h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 10px;
+    }
+    .faq-answer p {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.4;
+    }
+    .contact-form label {
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    .contact-form textarea {
+      height: 200px;
+    }
+    .contact-form button[type="submit"] {
+      background-color: #FF9900;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+    }
+    .contact-form button[type="submit"]:hover {
+      background-color: #FFAD33;
+    }
+    .live-chat p {
+      font-size: 1.2rem;
+      color: #111;
+    }
+    /* Add this to style the footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    footer li {
+      display: inline;
+      margin: 0 10px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
 </head>
-
-</div>
-
-</section>
-    </main>
-    <footer>
+<body>
+  <header>
+    <div class="nav">
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href=privacypolicy.html>Privacy Policy</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Cart <span class="cart-count">0</span></a></li>
       </ul>
-    </footer>
-  </body>
+      <form class="search-form">
+        <input type="text" placeholder="Search for products...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+  <main>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <a href="clothing.html"><img src="download.jpeg"></a>
+      </div>
+      <div class="mySlides">
+        <a href="books.html"><img src="download (1).jpeg"></a>
+      </div>
+      <div class="mySlides">
+        <a href="electronics.html"><img src="images.jpeg"></a>
+      </div>
+      <!-- Add more slides here -->
+      <!-- Add arrows to navigate the slideshow -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- Add dots at the bottom of the slideshow to indicate the current slide -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <!-- Add more dots here -->
+    </div>
+    <div class="products-container">
+      <h2>Featured Products</h2>
+      <ul class="products-list">
+        <li class="product">
+          <div class="product-image">
+            <img src="product1.jpg" alt="Product 1">
+          </div>
+          <div class="product-details">
+            <h3>Product 1</h3>
+            <p class="price">$10.99</p>
+          </div>
+        </li>
+        <li class="product">
+          <div class="product-image">
+            <img src="product2.jpg" alt="Product 2">
+          </div>
+          <div class="product-details">
+            <h3>Product 2</h3>
+            <p class="price">$19.99</p>
+          </div>
+        </li>
+        <!-- Add more products here -->
+      </ul>
+    </div>
+    <div class="customer-support">
+      <h2>Customer Support</h2>
+      <div class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <ul>
+          <li><a href="#">How do I place an order?</a></li>
+          <li><a href="#">What payment methods do you accept?</a></li>
+          <li><a href="#">What is your return policy?</a></li>
+          <!-- Add more FAQ items here -->
+        </ul>
+        <div class="faq-answer">
+          <h4>How can I contact customer support?</h4>
+          <p>You can contact us via live chat or by filling out the contact form below.</p>
+          <p><a href="livechat.html">Live chat</a></p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Contact Us</h3>
+        <form>
+          <!-- Contact form fields -->
+        </form>
+      </div>
+      <div class="live-chat">
+        <h3>Live Chat</h3>
+        <p>Click the button below to start a live chat session with a customer support representative.</p>
+        <p><a href="#">Start live chat</a></p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="privacypolicy.html">Privacy Policy</a></li>
+    </ul>
+  </footer>
+</body>
 </html>
